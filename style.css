@@ -3,43 +3,35 @@ body {
   margin: 0;
 }
 
-.container {
+.nav {
   display: flex;
-  flex-direction: column; /* เรียงแนวตั้ง */
+  justify-content: space-around;
+  background: #0d3db7;
 }
 
+.nav a {
+  color: white;
+}
 .content,
 .sidebar {
   padding: 10px;
 }
 
-/* Tablet (768px ขึ้นไป) */
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile */
+  gap: 10px;
+}
+
 @media (min-width: 768px) {
   .container {
-    flex-direction: row; /* เรียงแนวนอน */
-  }
-
-  .content {
-    flex: 2;
-  }
-
-  .sidebar {
-    flex: 1;
+    grid-template-columns: 2fr 1fr; /* tablet */
   }
 }
 
-/* Desktop (1024px ขึ้นไป) */
 @media (min-width: 1024px) {
-  body {
-    max-width: 1000px;
-    margin: auto;
+  .container {
+    grid-template-columns: 3fr 1fr; /* desktop */
   }
-
-  .content {
-    flex: 3;
-  }
-
-  .sidebar {
-    flex: 1;
-  }
+}
 }
