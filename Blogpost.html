@@ -1,13 +1,10 @@
-# ข้อที่ 2 HTML5 และ Semantic Markup
-
-### ให้เขียนรหัส HTML5 สำหรับหน้าแสดงบทความข่าวสาร (Blog Post) โดยต้องประกอบด้วย: header ที่มี logo และ navigation menu, main content ที่มีบทความย่อยหลายข้อ, sidebar สำหรับหมวดหมู่, และ footer ที่มี social links ใช้ semantic elements อย่างถูกต้อง (เช่น `<header>`, `<nav>`, `<article>`, `<section>`, `<aside>`, `<footer>`)
-
-```html
 <!doctype html>
 <html lang="th">
   <head>
     <meta charset="UTF-8" />
     <title>Blog Post</title>
+    <!-- ลิงค์ไปยังไฟล์ style.css -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -54,25 +51,3 @@
     </footer>
   </body>
 </html>
-```
-
-![2-2.png](images/2-2.png)
-
----
-
-#### ถาม AI วิธีแปะรูปลงในไฟล์ markdown
-
-คำตอบ: กรณีรูปอยู่ในโฟลเดอร์ images
-
-โครงสร้าง:
-
-project/
-├── README.md
-└── images/
-└── pic.png
-
-เขียน:
-
-`![รูป](images/pic.png)`
-
----

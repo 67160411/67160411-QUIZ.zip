@@ -1,0 +1,45 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* เรียงแนวตั้ง */
+}
+
+.content,
+.sidebar {
+  padding: 10px;
+}
+
+/* Tablet (768px ขึ้นไป) */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* เรียงแนวนอน */
+  }
+
+  .content {
+    flex: 2;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+}
+
+/* Desktop (1024px ขึ้นไป) */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .content {
+    flex: 3;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+}
